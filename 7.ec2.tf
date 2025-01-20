@@ -1,7 +1,11 @@
 data "aws_ami" "my_ami" {
   most_recent = true
-  name_regex  = "^DevSecOps"
-  owners      = ["211125710812"]
+  #name_regex  = "^DevSecOps"
+  owners      = ["301023768059"]
+  filter {
+    name   = "name"
+    values = ["DevSecOps_Ansible-Image"]
+  }
 }
 
 
